@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Conway's Game of Life</title>
+  </head>
+  <body onload="Game.init();Ui.init();">
+    <h1>Conway's Game of Life</h1>
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+    <br>
+    <button type="button" id="stop" onclick="Ui.stop();">stop</button>
+    <button type="button" id="run" onclick="Ui.run()">play</button>
+    <button type="button" id="next" onclick="Ui.next()">next</button>
+    <button type="button" id="restart" onclick="Ui.restart()">restart</button>
+    <text>speed:</text>
+    <input type="range" id="speed" min="0" max="8" value="5" step="1" title="speed" oninput="Ui.changeSpeed()" onchange="Ui.changeSpeed()">
+    <text>size:</text>
+    <input type="range" id="size" min="0" max="6" value="2" step="1" title="size" oninput="Ui.changeSize()" onchange="Ui.changeSize()">
+
+    <script src="js/util.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+  </body>
+</html>
