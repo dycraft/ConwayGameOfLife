@@ -33,9 +33,9 @@
 - report.md | 技术文档
 
 发布地址：
-- [程序地址](https://dycraft.github.io/projects/ConwayGameOfLife/)
-- [测试页面](https://dycraft.github.io/projects/ConwayGameOfLife/test/test.html)
-- [项目地址](https://github.com/dycraft/dycraft.github.io/tree/master/projects/ConwayGameOfLife)
+- [程序地址](https://dycraft.github.io/ConwayGameOfLife/)
+- [测试页面](https://dycraft.github.io/ConwayGameOfLife/test/test.html)
+- [项目地址](https://github.com/dycraft/ConwayGameOfLife)
 
 ## 实现细节
 - 将游戏的循环划分为logic和render。render负责canvas的内容的渲染，logic负责计算各个细胞的状态。用两个矩阵分别存储细胞的状态和周围细胞数量。
