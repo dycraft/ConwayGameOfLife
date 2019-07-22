@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Conway's Game of Life</title>
   </head>
-  <body onload="Game.init();Ui.init();">
+  <body onload="Ui.init();">
     <h1>Conway's Game of Life</h1>
 
     <canvas id="canvas" width="600" height="600"></canvas>
@@ -18,8 +18,9 @@
     <text>size:</text>
     <input type="range" id="size" min="0" max="6" value="2" step="1" title="size" oninput="Ui.changeSize()" onchange="Ui.changeSize()">
 
-    <script src="js/util.js"></script>
-    <script src="js/game.js"></script>
+    <script type="module" src="js/cell.js"></script>
+    <script type="module" src="js/board.js"></script>
+    <script type="module" src="js/world.js"></script>
     <script src="js/ui.js"></script>
   </body>
 </html>

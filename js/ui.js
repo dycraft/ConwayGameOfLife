@@ -1,3 +1,5 @@
+import World from "./world";
+
 (function(){
   /* JS File: concat between logic and ui */
 
@@ -9,9 +11,11 @@
   var nextBtn = document.getElementById('next');
   var speedRange = document.getElementById('speed');
   var sizeRange = document.getElementById('size');
+  var world;
 
   // UI init, called by html in the beginning.
   Ui.init = function() {
+    world = new World();
     runBtn.style.display = 'none';
     stopBtn.style.display = '';
     nextBtn.style.display = 'none';
@@ -19,7 +23,7 @@
   };
 
   Ui.stop = function() {
-    Game.stop();
+    world.stop();
     stopBtn.style.display = 'none';
     runBtn.style.display = '';
     nextBtn.style.display = '';
@@ -27,11 +31,11 @@
   };
 
   Ui.next = function() {
-    Game.next();
+    world.next();
   };
 
   Ui.run = function() {
-    Game.run();
+    world.run();
     runBtn.style.display = 'none';
     stopBtn.style.display = '';
     nextBtn.style.display = 'none';
@@ -39,19 +43,19 @@
   };
 
   Ui.restart = function() {
-    Game.restart();
+    world.restart();
   };
 
   Ui.changeSpeed = function() {
-    Game.setSpeed(speedRange.value);
-    Game.stop();
-    Game.run();
+    world.setSpeed(speedRange.value);
+    world.stop();
+    world.run();
   };
 
   Ui.changeSize = function() {
-    Game.setSize(sizeRange.value);
-    Game.updateCanvasWH();
-    Game.draw();
+    world.setSize(sizeRange.value);
+    world.updateCanvasWH();
+    world.draw();
   };
 
 })();
